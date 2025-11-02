@@ -12,6 +12,7 @@
 
 .header.not-at-top {
     background-color: var(--accent-color);
+    color: var(--secondary-text-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -52,7 +53,6 @@
 }
 
 .header-navigation__menu ul li a {
-    color: var(--primary-text-color);
     text-decoration: none;
     font-weight: bold;
 }
@@ -63,7 +63,7 @@
 }
 
 .contact-us-btn {
-    background-color: var(--primary-text-color);
+    background-color: var(--secondary-accent-color);
     color: var(--secondary-text-color);
     text-decoration: none;
     font-weight: bold;
