@@ -1,0 +1,39 @@
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--background-color);
+}
+
+.footer ul {
+    margin-top: 10px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a {
+    border-bottom: 3px solid transparent;
+    transition: .3s ease;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer .copyright-text {
+    margin: 0;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer .top-bar {
+    height: var(--rim-width);
+    
+}
