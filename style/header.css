@@ -12,9 +12,9 @@
 
 .header.not-at-top {
     background-color: var(--accent-color);
-    color: var(--secondary-text-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    /* transition: background-color 0.3s ease, box-shadow 0.3s ease; */
+    transition: box-shadow 0.3s ease;
 }
 
 .header-navigation {
@@ -41,6 +41,10 @@
     height: 100%;
 }
 
+.header.not-at-top .header-navigation__logo img {
+    filter: brightness(100);
+}
+
 .header-navigation__menu ul {
     list-style: none;
     padding: 0;
@@ -55,6 +59,11 @@
 .header-navigation__menu ul li a {
     text-decoration: none;
     font-weight: bold;
+    color: var(--accent-color);
+}
+
+.header.not-at-top .header-navigation__menu ul li a {
+    color: var(--secondary-text-color);
 }
 
 .header-navigation__menu ul li:hover {
@@ -63,7 +72,7 @@
 }
 
 .contact-us-btn {
-    background-color: var(--secondary-accent-color);
+    background-color: var(--accent-color);
     color: var(--secondary-text-color);
     text-decoration: none;
     font-weight: bold;
@@ -76,6 +85,11 @@
     transition: all 0.3s ease-in;
 
     margin-right: 20px;
+}
+
+.header.not-at-top .contact-us-btn {
+    background-color: var(--secondary-text-color);
+    color: var(--accent-color);
 }
 
 .contact-us-btn:hover {

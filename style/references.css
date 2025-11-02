@@ -1,0 +1,121 @@
+.references-section {
+  /* background: var(--accent-color); */
+  color: #fff;
+  text-align: center;
+  padding: 80px 10%;
+  overflow: hidden;
+  position: relative;
+}
+
+.references-section h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.references-section h3 {
+  margin: 0;
+  opacity: 0.4;
+}
+
+/* Carousel container */
+.references-carousel {
+  max-width: 650px;
+  margin: 0 auto;
+  overflow: hidden;
+  /* border-radius: 20px; */
+  /* box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25); */
+  /* background: white; */
+  font-size: 2rem;
+}
+
+/* Track - holds all slides */
+.references-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+/* Each reference card */
+.reference {
+  min-width: 100%;
+  box-sizing: border-box;
+  color: #333;
+  padding: 50px 40px;
+  font-style: italic;
+  border-radius: 20px;
+}
+
+.reference span {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--accent-color);
+}
+
+/* Controls */
+.ref-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+/* Arrows */
+.ref-controls button {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  border-color: var(--accent-color);
+  border-style: solid;
+}
+
+.ref-controls button:hover {
+  background: white;
+  color: var(--accent-color);
+}
+
+/* Dots */
+.ref-dots {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.ref-dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-color: var(--accent-color);
+  border-style: solid;
+}
+
+.ref-dot.active {
+  background: var(--accent-color);
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .reference {
+    padding: 40px 25px;
+    font-size: 0.95rem;
+  }
+
+  .ref-controls {
+    gap: 15px;
+  }
+}

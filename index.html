@@ -11,19 +11,20 @@
         <link rel="stylesheet" href="/style/header.css">
         <link rel="stylesheet" href="/style/footer.css">
         <link rel="stylesheet" href="/style/homepage.css">
+        <link rel="stylesheet" href="/style/references.css">
 
         <link rel="icon" type="image/png" href="/media/icon.png">
     </head>
     <body>
-        <header class="header">
+        <header class="header not-at-top">
             <div class="header-navigation">
                 <a href="/" class="header-navigation__logo">
-                    <img src="/images/logo.png" alt="Ask Alice Logo">
+                    <img src="/media/logo.png" alt="Ask Alice Logo">
                 </a>
                 <nav class="header-navigation__menu">
                     <ul>
                         <li><a href="#services">SERVICES</a></li>
-                        <li><a href="#about-us">ABOUT</a></li>
+                        <li><a href="#references">REFERENCES</a></li>
                     </ul>
                 </nav>
             </div>
@@ -32,14 +33,122 @@
 
         </header>
 
-        <button id="backToTop" title="Go to top">↑</button>
+        <button id="backToTop" title="Go to top"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115.4 122.88"><title>up-arrow</title><path d="M24.94,67.88A14.66,14.66,0,0,1,4.38,47L47.83,4.21a14.66,14.66,0,0,1,20.56,0L111,46.15A14.66,14.66,0,0,1,90.46,67.06l-18-17.69-.29,59.17c-.1,19.28-29.42,19-29.33-.25L43.14,50,24.94,67.88Z"/></svg></button>
 
-        <section style="height:100vh"></section>
+        <section class="landing">
+            <div class="landing__content">
+                <img src="/media//logo2.png" alt="">
+                <h1>TUTORING, CHILDCARE AND PETSITTING</h1>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="services__content">
+                <img class="services-thumbnail" src="/media/cat.jpg" alt="">
+                <div class="services_wrapper">
+                    <h2 class="services-title">WHAT I DO</h2>
+                    <div style="height: 2px; width: 100px; background-color: var(--accent-color); margin: 20px 0;"></div>
+                    <h2 class="services-description">I offer a wide range of services to make your work and home life a much easier experience</h2>
+                    <div class="bullet-points">
+                        <ul>
+                            <li>Private tutoring; English As an Additional Language (Adults also), Numeracy and Literacy (4-11 years old) Specialising in Dyslexia, ADHD and other additional learning needs.</li>
+                            <li>Babysitting and childminding</li>
+                            <li>Pet/Housesitting and dog walking</li>
+                        </ul>
+                        <ul>
+                            <li>Cleaning and garden care</li>
+                            <li>Wait at home service; if you are expecting a delivery or service call and can't be at home... I can wait for you</li>
+                        </ul>
+                    </div>
+                    <h2>If I can't help you, I will help you find someone who can.</h2>
+                    <div class="fees">
+                        <div style="height: 2px; width: 700px; background-color: var(--accent-color); margin: 20px 0; margin-right: 20px"></div>
+                        <p>My fees reflect the situation.
+                            I take into account my costs (eg travel) and your needs.
+                            For tutoring, I can offer special rates for low income families etc
+                            Please contact me for more details.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="height: 2px; width: 800px; background-color: var(--accent-color); margin: 20px auto;"></div>
+
+        <section class="references-section" id="references">
+            <h2>References</h2>
+            <h3>(Extended versions available upon request)</h3>
+
+            <div class="references-carousel">
+                <div class="references-track">
+                    <div class="reference">
+                        <p>"The best cat-sitter ever!"</p>
+                        <span>- Not me</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ref-controls">
+                <button class="prev">‹</button>
+                <div class="ref-dots"></div>
+                <button class="next">›</button>
+            </div>
+        </section>
+        
+        <section class="contact" id="contact-us">
+            <img class="contact-background" src="/media/background.jpg" alt="te">
+            <div class="contact-container">
+                <!-- Left side: CEO info -->
+                <div class="contact-info">
+                    <img src="/media/mandi.jpg" alt="CEO Photo" class="ceo-photo">
+                    <div class="ceo-details">
+                        <h2 class="ceo-name">Mandi Richardson</h2>
+                        <p class="ceo-title">Founder, Ask Alice</p>
+                        <div style="height: 2px; width: 100%; background-color: var(--accent-color); margin: 20px auto;"></div>
+                        <blockquote class="ceo-quote">
+                            "INSERT MANDI QUOTE HERE”
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- Right side: Contact form -->
+                <div class="contact-form">
+                <h2>Contact Me - <a href="tel:+34638845837">+34 638 84 58 37</a></h2>
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-us__form">
+                    <input type="hidden" name="access_key" value="">
+
+                    <div class="form-input-container">
+                        <input type="text" name="full_name" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="form-input-container">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="form-input-container message-input-container">
+                        <textarea name="message" cols="30" rows="6" placeholder="Comment" required></textarea>
+                    </div>
+
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <button type="submit">SUBMIT</button>
+                </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-location" id="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.2348311404683!2d1.8110841786147356!3d41.31018355556602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a47e4a71e189e5%3A0xd6a22bbda0355f92!2s08818%20Olivella%2C%20Barcelona%2C%20Spain!5e0!3m2!1sen!2suk!4v1762117584258!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
 
         <footer class="footer">
             <ul class="footer-nav-list">
                 <li>
-                    <a href="#about-us">About Us</a>
+                    <a href="#services">Services</a>
+                </li>
+                <li>
+                    <a href="#references">References</a>
                 </li>
                 <li>
                     <a href="#contact-us">Contact</a>
@@ -49,6 +158,7 @@
         </footer>
         
         <script src="/code/header-behaviour.js"></script>
+        <script src="/code/references.js"></script>
 
     </body>
 </html>

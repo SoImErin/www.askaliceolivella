@@ -1,14 +1,15 @@
 :root {
     --accent-color: #ed9393;
     --secondary-accent-color: #fac2a9;
-    --background-color: #e9e9e9;
+    --deep-secondary-accent-color: #e7af96;
+    --background-color: #ffffff;
     --alternate-background-color: #141414;
     
     --rim-color: #c9c9c9;
     --alternate-rim-color: #6e6e6e;
 
     --primary-text-color: #141414;
-    --secondary-text-color: #e9e9e9;
+    --secondary-text-color: #ffffff;
 
     --rim-width: 3px;
     --header-height: 80px;
@@ -29,7 +30,7 @@ html, body {
     /* overflow: hidden; */
     /* height: 100%; */
     margin: 0;
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     font-family: "League Spartan", sans-serif;
 }
 
@@ -46,21 +47,32 @@ html, body {
 #backToTop {
     position: fixed;
     bottom: 50px;
-    right: 0px;
-    background-color: var(--accent-color);
+    right: -100px;
+    background-color: var(--secondary-accent-color);
     color: var(--secondary-text-color);
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1rem;
     z-index: 999;
+    padding: 10px 20px;
+    padding-right: 40px;
+    transition: all 0.3s ease;  
+    box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+#backToTop svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--secondary-text-color);
 }
 
 #backToTop.active {
-    
+    right:0px; 
 }
 
 #backToTop:hover {
-    background-color: var(--secondary-accent-color);
+    background-color: var(--deep-secondary-accent-color);
     transform: translateY(-3px);
 }

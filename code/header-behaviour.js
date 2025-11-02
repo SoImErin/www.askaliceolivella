@@ -1,25 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const header = document.querySelector(".header");
-    const backToTop = document.getElementById("backToTop");
+  const track = document.querySelector(".references-track");
+  const slides = document.querySelectorAll(".reference");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
+  const dotsContainer = document.querySelector(".ref-dots");
 
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 10) {
-            header.classList.add("not-at-top");
-        } else {
-            header.classList.remove("not-at-top");
-        }
+  let index = 0;
+  const total = slides.length;
 
-        if (window.scrollY > 10) {
-            backToTop.style.display = "block";
-        } else {
-            backToTop.style.display = "none";
-        }
-    });
+  // Create dots dynamically
+  slides.forEach((_, i) => {
+    const dot = document.createElement("div");
+    dot.classList.add("ref-dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
 
-    backToTop.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
+  const dots = document.querySelectorAll(".ref-dot");
+
+  function goToSlide(i) {
+    index = i;
+    track.style.transform = `translateX(-${i * 100}%)`;
+    updateDots();
+  }
+
+  function updateDots() {
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % total;
+    goToSlide(index);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + total) % total;
+    goToSlide(index);
+  });
+
+  // Auto-slide every 6 seconds
+  setInterval(() => {
+    index = (index + 1) % total;
+    goToSlide(index);
+  }, 6000);
 });
