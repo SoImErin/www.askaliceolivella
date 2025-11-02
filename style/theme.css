@@ -43,7 +43,7 @@ html, body {
     z-index: 0;
 }
 
-.backToTop {
+#backToTop {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -59,7 +59,7 @@ html, body {
     z-index: 999;
 }
 
-.backToTop:hover {
+#backToTop:hover {
     background-color: var(--deep-accent-color);
     transform: translateY(-3px);
 }
