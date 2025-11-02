@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             header.classList.remove("not-at-top");
         }
 
-        if (window.scrollY > 300) {
+        if (window.scrollY > 10) {
             backToTop.style.display = "block";
         } else {
             backToTop.style.display = "none";
