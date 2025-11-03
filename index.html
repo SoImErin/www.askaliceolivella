@@ -21,7 +21,7 @@
                 <a href="/" class="header-navigation__logo">
                     <img src="media/logo.png" alt="Ask Alice Logo">
                 </a>
-                <nav class="header-navigation__menu">
+                <nav class="header-navigation__menu in-mobile-nav">
                     <ul>
                         <li><a href="#services">SERVICES</a></li>
                         <li><a href="#references">REFERENCES</a></li>
@@ -29,8 +29,23 @@
                 </nav>
             </div>
 
-            <a href="#contact-us" class="contact-us-btn">CONTACT</a>
+            <a href="#contact-us" class="contact-us-btn in-mobile-nav">CONTACT</a>
 
+            <div class="mobile-nav-container">
+                <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <nav class="mobile-nav" id="mobileNav">
+                    <ul>
+                        <li><a href="#services">SERVICES</a></li>
+                        <li><a href="#references">REFERENCES</a></li>
+                        <li><a href="#contact-us">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <button id="backToTop" title="Go to top"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115.4 122.88"><title>up-arrow</title><path d="M24.94,67.88A14.66,14.66,0,0,1,4.38,47L47.83,4.21a14.66,14.66,0,0,1,20.56,0L111,46.15A14.66,14.66,0,0,1,90.46,67.06l-18-17.69-.29,59.17c-.1,19.28-29.42,19-29.33-.25L43.14,50,24.94,67.88Z"/></svg></button>
@@ -47,10 +62,10 @@
                 <img class="services-thumbnail" src="media/cat.jpg" alt="">
                 <div class="services_wrapper">
                     <h2 class="services-title">WHAT I DO</h2>
-                    <div style="height: 2px; width: 100px; background-color: var(--accent-color); margin: 20px 0;"></div>
+                    <div class="services__divider" style="height: 2px; width: 100px; background-color: var(--accent-color); margin: 20px 0;"></div>
                     <h2 class="services-description">I offer a wide range of services to make your work and home life a much easier experience</h2>
                     <div class="bullet-points">
-                        <ul>
+                        <ul class="first-child">
                             <li>Private tutoring; English As an Additional Language (Adults also), Numeracy and Literacy (4-11 years old) Specialising in Dyslexia, ADHD and other additional learning needs.</li>
                             <li>Babysitting and childminding</li>
                             <li>Pet/Housesitting and dog walking</li>
@@ -60,9 +75,9 @@
                             <li>Wait at home service; if you are expecting a delivery or service call and can't be at home... I can wait for you</li>
                         </ul>
                     </div>
-                    <h2>If I can't help you, I will help you find someone who can.</h2>
+                    <h2 class="services__footnote">If I can't help you, I will help you find someone who can.</h2>
                     <div class="fees">
-                        <div style="height: 2px; width: 700px; background-color: var(--accent-color); margin: 20px 0; margin-right: 20px"></div>
+                        <div class="services__divider" style="height: 2px; width: 700px; background-color: var(--accent-color); margin: 20px 0; margin-right: 20px"></div>
                         <p>My fees reflect the situation.
                             I take into account my costs (eg travel) and your needs.
                             For tutoring, I can offer special rates for low income families etc
@@ -72,7 +87,7 @@
             </div>
         </section>
 
-        <div style="height: 2px; width: 800px; background-color: var(--accent-color); margin: 20px auto;"></div>
+        <div class="references__divider" style="height: 2px; width: 800px; background-color: var(--accent-color); margin: 20px auto;"></div>
 
         <section class="references-section" id="references">
             <h2>References</h2>
@@ -116,7 +131,7 @@
 
                 <!-- Right side: Contact form -->
                 <div class="contact-form">
-                <h2>Contact Me - <a href="tel:+34638845837">+34 638 84 58 37</a></h2>
+                <h2>Contact Me <span class="pc-text">-</span> <br class="mobile-break"><a href="tel:+34638845837">+34 638 84 58 37</a></h2>
                 <form action="https://api.web3forms.com/submit" method="POST" class="contact-us__form">
                     <input type="hidden" name="access_key" value="">
 
@@ -163,6 +178,8 @@
         
         <script src="code/header-behaviour.js"></script>
         <script src="code/references.js"></script>
+        <script src="code/mobileNav.js"></script>
+
 
     </body>
 </html>

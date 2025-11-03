@@ -96,3 +96,111 @@
     transform: scale(1.1);
     transition: all 0.3s ease-in;
 }
+
+.mobile-nav-container {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .in-mobile-nav {
+        display: none;
+    }
+    
+    .mobile-nav-container {
+        display: unset;
+        position: relative;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 20px;
+    }
+
+    /* Hamburger button */
+    .hamburger-menu {
+        width: 40px;
+        height: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .hamburger-menu .bar {
+        height: 4px;
+        width: 100%;
+        background-color: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* When menu is open, animate to cross */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    /* Mobile nav menu */
+    .mobile-nav {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: var(--secondary-accent-color);
+        width: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    .mobile-nav.active {
+        display: flex;
+    }
+
+    .mobile-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .mobile-nav li {
+        width: 100%;
+    }
+
+    .mobile-nav a {
+        display: block;
+        width: 100%;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+        transition: background 0.2s ease;
+    }
+
+    .mobile-nav a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Simple slide-down effect */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
