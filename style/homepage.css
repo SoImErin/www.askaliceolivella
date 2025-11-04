@@ -223,6 +223,21 @@ button[type="submit"]:hover {
 }
 
 /* Responsive */
+@media (max-width: 1350px) {
+  .landing__content h1 {
+    font-size: 2.5rem;
+  }
+
+  .services__content {
+    padding: 100px;
+  }
+
+  .services-thumbnail {
+    display: none;
+  }
+}
+
+/* Responsive */
 @media (max-width: 900px) {
 
   .landing{
