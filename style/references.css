@@ -25,21 +25,23 @@
   /* border-radius: 20px; */
   /* box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25); */
   /* background: white; */
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 /* Track - holds all slides */
 .references-track {
   display: flex;
   transition: transform 0.6s ease;
+  align-items: center;
 }
 
 /* Each reference card */
 .reference {
+  position: relative;
   min-width: 100%;
   box-sizing: border-box;
   color: #333;
-  padding: 50px 40px;
+  padding: 60px 40px 50px;
   font-style: italic;
   border-radius: 20px;
 }

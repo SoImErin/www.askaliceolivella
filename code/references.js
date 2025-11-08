@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let index = 0;
   const total = slides.length;
+  let autoSlideInterval;
+  let isPaused = false;
 
   // Create dots dynamically
   slides.forEach((_, i) => {
@@ -40,9 +42,25 @@ document.addEventListener("DOMContentLoaded", () => {
     goToSlide(index);
   });
 
-  // Auto-slide every 6 seconds
-  setInterval(() => {
-    index = (index + 1) % total;
-    goToSlide(index);
-  }, 6000);
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+      if (!isPaused) {
+        index = (index + 1) % total;
+        goToSlide(index);
+      }
+    }, 6000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+
+  // Pause when hovering any reference
+  slides.forEach(slide => {
+    slide.addEventListener("mouseenter", () => (isPaused = true));
+    slide.addEventListener("mouseleave", () => (isPaused = false));
+  });
+
+  // Start auto-slide
+  startAutoSlide();
 });
